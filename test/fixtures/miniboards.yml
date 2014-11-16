@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  row: 1
+  column: 1
+  mark: MyString
+  board_id: 1
+
+two:
+  row: 1
+  column: 1
+  mark: MyString
+  board_id: 1

@@ -1,0 +1,61 @@
+// Place all the styles related to the Board controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  margin: 0;
+  padding: 0;
+}
+.board, .complete {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+.miniBoard {
+  opacity: .6;
+  position: relative;
+  height: 250px;
+  width: 250px;
+  .miniMark {
+    font-size: 230px;
+    text-align: center;
+    opacity: .8;
+  }
+  .complete {
+    z-index: 9999;
+  }
+  .board {
+    
+  }
+}
+.active{
+  opacity: 1;
+}
+
+
+.boardTile {
+  width: 33%;
+  height: 33%;
+  background: red;
+  font-size: 60px;
+  text-align: center;
+  padding: 0;
+}
+
+.active {
+  .boardTile:hover {
+    background: grey;
+    cursor: pointer;
+  }
+}
+
+.game {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: sans-serif;
+  .main_board {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,17 @@
+<table class="board">
+  <tr>
+    <% miniBoard.top_row.each do |tile| %>
+      <td class="boardTile" data-tileID=<%=tile.id %> id=<%=tile.id %>><%= tile.mark %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <% miniBoard.middle_row.each do |tile| %>
+      <td class="boardTile" data-tileID=<%=tile.id %> id=<%=tile.id %>><%= tile.mark  %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <% miniBoard.bottom_row.each do |tile| %>
+      <td class="boardTile" data-tileID=<%=tile.id %> id=<%=tile.id %>><%= tile.mark  %></td>
+    <% end %>
+  </tr>
+</table>

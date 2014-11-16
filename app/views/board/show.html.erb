@@ -1,0 +1,48 @@
+<div class="game">
+  <h1 class="turn"><% if @board.x_turn %>X Turn<% else %>O Turn <% end %></h1>
+  <table class="main_board">
+    <tr>
+      <% @board.top_row.each do |miniBoard| %>
+        <td class="miniBoard">
+          <% if miniBoard.mark %>
+            <div class="miniMark complete"><%= miniBoard.mark %></div>
+          <% else %>
+            <div class="miniMark"></div>
+          <% end %>
+          <%= render 'mini_board', miniBoard: miniBoard  %>
+        </td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @board.middle_row.each do |miniBoard| %>
+      <td class="miniBoard">
+        <% if miniBoard.mark %>
+          <div class="miniMark complete"><%= miniBoard.mark %></div>
+        <% else %>
+          <div class="miniMark"></div>
+        <% end %>
+        <%= render 'mini_board', miniBoard: miniBoard  %>
+      </td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @board.bottom_row.each do |miniBoard| %>
+      <td class="miniBoard">
+        <% if miniBoard.mark %>
+          <div class="miniMark complete"><%= miniBoard.mark %></div>
+        <% else %>
+          <div class="miniMark"></div>
+        <% end %>
+        <%= render 'mini_board', miniBoard: miniBoard  %>
+      </td>
+      <% end %>
+    </tr>
+  </table>
+</div>
+<script type="text/javascript">
+var turnX = <%= @board.x_turn %>
+var gameID = <%= @board.id %>
+var activeRow = <%= @board.active_row || 1%>
+var activeCol = <%= @board.active_col || 1%>
+var openPick = <%= @board.open_pick  %>
+</script>
